@@ -3,11 +3,22 @@
 # Go to home directory
 cd ~
 
-# Install using binary installer
+# Ubuntu server preparation 
+sudo apt upgrade --allow-unauthenticated -y
+sudo apt update --allow-unauthenticated -y
 sudo apt-get install pkg-config zip g++ zlib1g-dev unzip -y
+sudo apt install software-properties-common -y
+sudo add-apt-repository main -y
+sudo add-apt-repository universe -y
+sudo add-apt-repository restricted -y 
+sudo add-apt-repository multiverse -y
+
+# Install using binary installer
 wget https://github.com/bazelbuild/bazel/releases/download/0.8.0/bazel-0.8.0-installer-linux-x86_64.sh
 chmod +x bazel-0.8.0-installer-linux-x86_64.sh
 ./bazel-0.8.0-installer-linux-x86_64.sh --user
+source ~/.bazel/bin/bazel-complete.bash
+
 rm bazel-0.8.0-installer-linux-x86_64.sh
 echo 'export PATH="$PATH:$HOME/bin"' >> ~/.bashrc 
 # Refresh 
