@@ -1,3 +1,4 @@
+# This script is maintain under 
 # Go to home directory
 cd ~
 
@@ -15,10 +16,11 @@ conda update --all --yes
 
 # Git the TensorFlow latest respository
 git clone https://github.com/tensorflow/tensorflow /tmp/tensorgit
-cd /tmp/tensorgit/tensorflow
+cd /tmp/tensorgit
 
 # Install TensorFlow Python dependencies
 sudo apt-get install python3-numpy python3-dev python3-pip python3-wheel -y
+sudo apt-get install libcupti-dev -y
 
 # Install using binary installer
 sudo apt-get install pkg-config zip g++ zlib1g-dev unzip -y
@@ -30,7 +32,13 @@ echo 'export PATH="$PATH:$HOME/bin"' >> ~/.bashrc
 # Refresh 
 source .bashrc
 
-# 4- Once installed, you can upgrade to a newer version of Bazel with:
+# Once installed, you can upgrade to a newer version of Bazel with:
 sudo apt-get upgrade bazel -y
 
+# configure the build
 ./configure
+
+# Build TensorFlow
+bazel build --config=opt //tensorflow/tools/pip_package:build_pip_package
+
+
