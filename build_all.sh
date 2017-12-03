@@ -1,4 +1,5 @@
-# This script is maintain under 
+# This script is maintained under GNU Public License 
+
 # Go to home directory
 cd ~
 
