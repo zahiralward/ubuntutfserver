@@ -10,8 +10,8 @@ echo 'export PATH="~/anaconda/bin:$PATH"' >> ~/.bashrc
 
 # Refresh 
 source .bashrc
-conda update conda
-conda update --all
+conda update conda --yes
+conda update --all --yes
 
 # Git the TensorFlow latest respository
 git clone https://github.com/tensorflow/tensorflow /tmp/tensorgit
