@@ -4,9 +4,9 @@
 cd ~
 
 # Ubuntu server preparation 
-sudo apt upgrade --allow-unauthenticated -y
-sudo apt update --allow-unauthenticated -y
-sudo apt-get install pkg-config zip g++ zlib1g-dev unzip -y
+# sudo apt upgrade --allow-unauthenticated -y
+# sudo apt update --allow-unauthenticated -y
+sudo apt-get install pkg-config zip g++ zlib1g-dev unzip -
 sudo apt install software-properties-common -y
 sudo add-apt-repository main -y
 sudo add-apt-repository universe -y
