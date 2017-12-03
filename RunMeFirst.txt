@@ -1,0 +1,7 @@
+Installing TensorFlow on Ubuntu 17.10 Server
+
+sudo apt-get upgrade -y
+sudo apt install git -y
+git clone https://github.com/zahiralward/ubuntutfserver.git
+chmod +x ubuntutfserver/build_all.sh
+ubuntutfserver/build_all.sh
