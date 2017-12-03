@@ -1,1 +1,1 @@
-git clone https://github.com/tensorflow/tensorflow
+git clone https://github.com/tensorflow/tensorflow /tmp/tensorgit
